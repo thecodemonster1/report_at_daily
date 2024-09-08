@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:fluttermapp_tutorial_1hr/home_page.dart';
-// import 'package:fluttermapp_tutorial_1hr/profile_page.dart';
+import 'package:report_at_daily/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
