@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:report_at_daily/pages/home_page.dart';
+import 'package:report_at_daily/pages/profile_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,14 +30,14 @@ class RootPage extends StatefulWidget {
 
 class _RootPageState extends State<RootPage> {
   int currentPage = 0;
-  List<Widget> pages = const [HomePage()]; //, ProfilePage()
+  List<Widget> pages = const [HomePage(), ProfilePage()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter'),
+        title: const Text('Home'),
       ),
-      // body: pages[currentPage],
+      // body: pages[currentPage], 
       floatingActionButton: FloatingActionButton(
           onPressed: () {
             debugPrint("Floating Action Button is working...");
@@ -45,8 +46,8 @@ class _RootPageState extends State<RootPage> {
       bottomNavigationBar: NavigationBar(
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: "Home"),
-          NavigationDestination(icon: Icon(Icons.home), label: "Home"),
-          NavigationDestination(icon: Icon(Icons.person), label: "Profile"),
+          NavigationDestination(icon: Icon(Icons.calendar_month), label: "View"),
+          NavigationDestination(icon: Icon(Icons.add_circle), label: "Add"),
           NavigationDestination(icon: Icon(Icons.settings), label: "Settings"),
           NavigationDestination(icon: Icon(Icons.person), label: "Profile"),
         ],
