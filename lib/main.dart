@@ -29,7 +29,7 @@ class RootPage extends StatefulWidget {
 
 class _RootPageState extends State<RootPage> {
   int currentPage = 0;
-  // List<Widget> pages = const [HomePage(), ProfilePage()];
+  List<Widget> pages = const [HomePage()]; //, ProfilePage()
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,6 +45,9 @@ class _RootPageState extends State<RootPage> {
       bottomNavigationBar: NavigationBar(
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: "Home"),
+          NavigationDestination(icon: Icon(Icons.home), label: "Home"),
+          NavigationDestination(icon: Icon(Icons.person), label: "Profile"),
+          NavigationDestination(icon: Icon(Icons.settings), label: "Settings"),
           NavigationDestination(icon: Icon(Icons.person), label: "Profile"),
         ],
         onDestinationSelected: (int index) {
